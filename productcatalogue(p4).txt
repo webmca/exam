@@ -1,0 +1,126 @@
+product catalogue using layout
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Product Catalogue</title>
+<style> body {
+font-family: Arial, Helvetica, sans-serif; background-color: #f4f6f8;
+margin: 0;
+padding: 0;
+}
+
+h1 {
+text-align: center; padding: 20px; color: #333;
+}
+
+/* Product Grid */
+.catalogue { display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+padding: 20px;
+max-width: 1200px; margin: auto;
+}
+
+/* Card Design */
+.card {
+background-color: #fff; border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); overflow: hidden;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img { width: 100%; height: 180px;
+ 
+object-fit: cover;
+}
+
+.card-content { padding: 15px; text-align: center;
+}
+
+.card-content h3 { margin: 10px 0;
+color: #222;
+}
+
+.card-content p { font-size: 14px; color: #666;
+}
+.price {
+font-size: 18px; font-weight: bold; color: #27ae60; margin: 10px 0;
+}
+
+.btn {
+display: inline-block; padding: 10px 15px; background-color: #3498db; color: #fff;
+text-decoration: none; border-radius: 5px;
+transition: background-color 0.3s;
+}
+
+.btn:hover {
+background-color: #217dbb;
+}
+
+footer {
+text-align: center; padding: 15px; background-color: #222; color: #fff;
+margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<h1>Product Catalogue</h1>
+ 
+<div class="catalogue">
+<div class="card">
+<img
+src="C:\Users\z\OneDrive\Documents\web\pro4\images (3).jpeg" alt="Product 1"
+/>
+<div class="card-content">
+<h3>Wireless Headphones</h3>
+<p>High quality sound with noise cancellation.</p>
+<div class="price">₹2,999</div>
+<a href="#" class="btn">Buy Now</a>
+</div>
+</div>
+
+<div class="card">
+<img src="C:\Users\z\OneDrive\Documents\web\pro4\images.jpeg" alt="Product 2"
+/>
+<div class="card-content">
+<h3>Smart Watch</h3>
+<p>Track your fitness and health easily.</p>
+<div class="price">₹4,499</div>
+<a href="#" class="btn">Buy Now</a>
+</div>
+</div>
+
+<div class="card">
+<img
+src="C:\Users\z\OneDrive\Documents\web\pro4\images (2).jpeg" alt="Product 3"
+/>
+<div class="card-content">
+<h3>Gaming Mouse</h3>
+<p>Ergonomic design with RGB lighting.</p>
+<div class="price">₹1,299</div>
+<a href="#" class="btn">Buy Now</a>
+</div>
+</div>
+
+<div class="card">
+<img
+src="C:\Users\z\OneDrive\Documents\web\pro4\images (1).jpeg" alt="Product 4"
+/>
+<div class="card-content">
+<h3>Bluetooth Speaker</h3>
+<p>Portable speaker with deep bass.</p>
+<div class="price">₹1,999</div>
+<a href="#" class="btn">Buy Now</a>
+</div>
+ 
+</div>
+</div>
+
+<footer>© 2026 Product Catalogue | Designed by z</footer>
+</body>
+</html>
