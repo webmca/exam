@@ -1,0 +1,161 @@
+college time table
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>College Timetable</title>
+<style>
+* {
+box-sizing: border-box; margin: 0;
+padding: 0;
+}
+body {
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7fa;
+color: #333; padding: 30px;
+}
+
+.container {
+max-width: 1200px; margin: auto;
+background-color: #ffffff; padding: 40px;
+border-radius: 12px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+h1 {
+text-align: center; color: #2c3e50; margin-bottom: 20px; font-size: 36px;
+font-weight: bold;
+}
+
+.details {
+text-align: center; margin-bottom: 20px; color: #7f8c8d;
+font-size: 18px;
+}
+
+.details strong { color: #2c3e50;
+}
+
+.table-container { overflow-x: auto;
+}
+ 
+table {
+width: 100%;
+border-collapse: collapse; min-width: 900px;
+}
+th,
+td {
+border: 1px solid #e0e0e0; padding: 15px;
+text-align: center; font-size: 16px;
+}
+th {
+background-color: #2980b9; color: #ffffff;
+font-weight: 600;
+}
+
+td {
+background-color: #ecf0f1;
+}
+
+tr:nth-child(even) td { background-color: #f9f9f9;
+}
+tr:hover {
+background-color: #d5e5f0;
+}
+
+.time {
+background-color: #dfe6e9; font-weight: bold;
+}
+.break {
+background-color: red; font-weight: bold; color: white;
+}
+footer {
+text-align: center; margin-top: 30px; color: #7f8c8d; font-size: 14px;
+border-top: 1px solid #e0e0e0; padding-top: 10px;
+}
+
+@media (max-width: 768px) { h1 {
+font-size: 28px;
+}
+ 
+table {
+min-width: 600px;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>College Timetable</h1>
+<div class="details">
+<p><strong>Course:</strong> MCA</p>
+<p>
+<strong>Semester:</strong> II &nbsp; | &nbsp;
+<strong>Section:</strong> c
+</p>
+</div>
+<div class="table-container">
+<table>
+<tr>
+<th>Day / Time</th>
+<th>9:00 - 10:00</th>
+<th>10:00 - 11:00</th>
+<th>11:00 - 12:00</th>
+<th>12:00 - 1:00</th>
+<th>1:00 - 2:00</th>
+<th>2:00 - 3:00</th>
+</tr>
+
+<tr>
+<td class="time">Monday</td>
+<td>Python</td>
+<td>Data Mining</td>
+<td>Data Mining</td>
+<td class="break">Lunch</td>
+<td>IOT</td>
+<td>Python</td>
+</tr>
+
+<tr>
+<td class="time">Tuesday</td>
+<td>IOT</td>
+<td>Software Project</td>
+<td>IOT</td>
+<td class="break">Lunch</td>
+<td>Software Project</td>
+<td>IOT</td>
+</tr>
+<tr>
+<td class="time">Wednesday</td>
+<td>Software Project</td>
+<td>IOT</td>
+<td>Software Project</td>
+<td class="break">Lunch</td>
+ 
+<td>Data Mining</td>
+<td>Software Project</td>
+</tr>
+<tr>
+<td class="time">Thursday</td>
+<td>Data Mining</td>
+<td>Python</td>
+<td>Data Mining</td>
+<td class="break">Lunch</td>
+<td>Python</td>
+<td>Data Mining</td>
+</tr>
+<tr>
+<td class="time">Friday</td>
+<td>Python</td>
+<td>IOT</td>
+<td>Python</td>
+<td class="break">Lunch</td>
+<td>Data Mining</td>
+<td>Python</td>
+</tr>
+</table>
+</div>
+<footer>||| 2026 College Timetable |||</footer>
+</div>
+</body>
+</html>
