@@ -1,3 +1,121 @@
 basic authentication login
 
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Login Page</title>
+       <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("bg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: white;
+            padding: 30px;
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(121, 27, 27, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #df4ec0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #b4d92e;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .success {
+            color: green;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h2>Login Form</h2>
+
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button type="submit">Login</button>
+        <div id="message"></div> 
+    </form>
+</div>
+
+<script>
+
+    const validUsername = "admin";
+    const validPassword = "1234";
+
+    const form = document.getElementById("loginForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        message.textContent = "";
+        message.className = "";
+
+        if (username === "" || password === "") {
+            message.textContent = "Please fill in all fields.";
+            message.className = "error";
+            return;
+        }
+
+        if (username === validUsername && password === validPassword) {
+            message.textContent = "Login Successful!";
+            message.className = "success";
+
+                setTimeout(function() {
+                    window.location.href = "home.html"; 
+                }, 2000);
+
+        } else {
+            message.textContent = "Invalid Username or Password.";
+            message.className = "error";
+        }
+    });
+</script>
+</body>
+</html>
